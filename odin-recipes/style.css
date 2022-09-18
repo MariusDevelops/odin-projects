@@ -19,11 +19,50 @@ img {
   width: 25%;
 }
 
+a,
+a:link {
+  text-decoration: none;
+  color: white;
+}
+
+/* --------------- HEADING ------------- */
+
+.heading-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
 .odinHeading {
-  position: absolute;
+  /* position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 30px;
+  text-shadow: 2px 2px #ff0000;
+  width: 500px;
+  height: 250px;
+  border-color: white;
+  border-style: dotted;
+  border-width: 40px;
+  margin: auto;
+}
+
+/* --------------- RECIPES ------------- */
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
   display: flex;
   justify-content: center;
   align-items: center;
