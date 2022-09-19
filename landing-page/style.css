@@ -3,3 +3,45 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* ------------- HEADER ------------- */
+header {
+  background-color: #1f2937;
+  height: 500px;
+  padding: 20px 200px 100px;
+}
+
+/* ------------- NAV ------------- */
+.navLogo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #f9faf8;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: #000000;
+}
+
+ul {
+  display: flex;
+  font-size: 18px;
+  color: #e5e7eb;
+  list-style-type: none;
+}
+
+li {
+  padding-right: 20px;
+}
+
+li:last-child {
+  padding-right: 0px;
+}
+/* ------------- NAV ------------- */
