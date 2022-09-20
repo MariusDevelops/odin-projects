@@ -1,26 +1,41 @@
+/* ------------- GLOBAL STYLES ------------- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  background-color: #000000;
+}
+
 body {
   font-family: "Roboto", sans-serif;
+  margin: auto;
+  width: 1400px;
+}
+
+h1 {
+  font-size: 48px;
+  color: #f9faf8;
+  font-weight: 700;
+}
+
+p {
+  font-size: 18px;
+  color: #e5e7eb;
+  font-weight: 400;
+  margin: 20px 40px 20px 0px;
 }
 
 /* ------------- HEADER ------------- */
 header {
   background-color: #1f2937;
-  height: 500px;
-  padding: 20px 200px 100px;
+  height: 600px;
+  padding: 0px 200px 0px;
 }
 
 /* ------------- NAV ------------- */
-.navLogo {
-  font-size: 24px;
-  font-weight: 700;
-  color: #f9faf8;
-}
 
 nav {
   display: flex;
@@ -28,6 +43,13 @@ nav {
   justify-content: space-between;
   align-items: center;
   color: #000000;
+  height: 100px;
+}
+
+.navLogo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #f9faf8;
 }
 
 ul {
@@ -39,9 +61,42 @@ ul {
 
 li {
   padding-right: 20px;
+  font-weight: 400;
 }
 
 li:last-child {
   padding-right: 0px;
 }
 /* ------------- NAV ------------- */
+
+.headerSection {
+  display: flex;
+  margin-top: 100px;
+}
+
+.section-one {
+  width: 500px;
+}
+
+.button {
+  background-color: #3882f6;
+  height: 40px;
+  width: 140px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #f9faf8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-two {
+  background-color: rgb(97, 102, 120);
+  width: 500px;
+  height: 270px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* ------------- HEADER ------------- */
