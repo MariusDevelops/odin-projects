@@ -106,7 +106,7 @@ li:last-child {
 /* ------------- MAIN ------------- */
 main {
   background-color: white;
-  height: 450px;
+  height: 500px;
 }
 
 h2 {
@@ -137,5 +137,35 @@ h2 {
   text-align: center;
   padding-top: 10px;
 }
-
 /* ------------- MAIN ------------- */
+
+/* ------------- QUOTE SECTION ------------- */
+.quote-section {
+  background-color: #e5e7eb;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.quote {
+  width: 850px;
+}
+
+h3 {
+  font-size: 36px;
+  color: #1f2937;
+
+  text-align: justify;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.author {
+  font-size: 36px;
+  color: #1f2937;
+  font-weight: 700;
+  text-align: right;
+}
+/* ------------- QUOTE SECTION ------------- */
