@@ -35,7 +35,6 @@ header {
 }
 
 /* ------------- NAV ------------- */
-
 nav {
   display: flex;
   flex-direction: row;
@@ -105,8 +104,8 @@ li:last-child {
 
 /* ------------- MAIN ------------- */
 main {
-  background-color: white;
-  height: 500px;
+  background-color: #fff;
+  height: 450px;
 }
 
 h2 {
@@ -169,3 +168,56 @@ h3 {
   text-align: right;
 }
 /* ------------- QUOTE SECTION ------------- */
+
+/* ------------- BANNER SECTION ------------- */
+.banner-section {
+  background-color: #fff;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-box {
+  background-color: #3882f6;
+  height: 150px;
+  width: 1000px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.banner-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  padding: 0px 150px 0px 100px;
+}
+
+.line-one {
+  color: #f9faf8;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.banner-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-up-btn {
+  color: #f9faf8;
+  border: 3px solid #f9faf8;
+  height: 40px;
+  width: 140px;
+  border-radius: 10px;
+  font-size: 24x;
+  font-weight: 700;
+  color: #f9faf8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* ------------- BANNER SECTION ------------- */
