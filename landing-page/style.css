@@ -24,6 +24,7 @@ h1 {
 p {
   font-size: 18px;
   color: #c9cbce;
+  /* color: #e5e7eb; */
   font-weight: 400;
 }
 
@@ -221,3 +222,12 @@ h3 {
   align-items: center;
 }
 /* ------------- BANNER SECTION ------------- */
+
+/* ------------- FOOTER ------------- */
+footer {
+  height: 100px;
+  background-color: #1f2937;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
