@@ -20,11 +20,11 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-const playerSelection = "rock";
+// 3. Make your function’s playerSelection parameter case-insensitive (so users can input rock, ROCK, RocK or any other variation).
+let guess = "RoCk";
+const playerSelection = guess.toLowerCase();
 const computerSelection = getComputerChoice();
 
 console.log("player: " + playerSelection);
 console.log("computer: " + computerSelection);
 console.log(playRound(playerSelection, computerSelection));
-
-// 3. Make your function’s playerSelection parameter case-insensitive (so users can input rock, ROCK, RocK or any other variation).
