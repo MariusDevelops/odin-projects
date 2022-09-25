@@ -11,9 +11,17 @@ getComputerChoice();
 // The function should take two parameters - the playerSelection and
 // computerSelection - and then return a string that declares the winner of the round like so: "You Lose! Paper beats Rock"
 function playRound(playerSelection, computerSelection) {
-  if (playerSelection == "rock" && computerSelection == "scissors") {
+  if (
+    (playerSelection == "rock" && computerSelection == "scissors") ||
+    (playerSelection == "paper" && computerSelection == "rock") ||
+    (playerSelection == "scissors" && computerSelection == "paper")
+  ) {
     return "winner: player wins!";
-  } else if (playerSelection == "rock" && computerSelection == "paper") {
+  } else if (
+    (playerSelection == "scissors" && computerSelection == "rock") ||
+    (playerSelection == "rock" && computerSelection == "paper") ||
+    (playerSelection == "paper" && computerSelection == "rscissorsock")
+  ) {
     return "winner: computer wins!";
   } else {
     return "winner: tie! nobody wins!";
@@ -36,7 +44,8 @@ function game() {
 
   for (let i = 0; i < 5; i++) {
     // 3. Make your function’s playerSelection parameter case-insensitive (so users can input rock, ROCK, RocK or any other variation).
-    let guess = "ROCK";
+    // 4.1 Use prompt() to get input from the user.
+    let guess = prompt("rock, paper or scissors?");
     const playerSelection = guess.toLowerCase();
     const computerSelection = getComputerChoice();
 
