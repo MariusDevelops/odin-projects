@@ -1,8 +1,12 @@
+const playerScore = document.querySelector("#playerScore");
+const computerScore = document.querySelector("#computerScore");
+
 // Add a div for displaying results and change all of your console.logs into DOM methods.
 const playerSelectionDisplay = document.querySelector("#player-choise");
 const computerSelectionDisplay = document.querySelector("#computer-choise");
-const result = document.querySelector("#result");
+const resultDisplay = document.querySelector("#result");
 const buttons = document.querySelectorAll("button");
+const winner = document.querySelector("#winner");
 
 // Create three buttons, one for each selection. Add an event listener to the buttons that call your playRound function
 // with the correct playerSelection every time a button is clicked. (you can keep the console.logs for this step)
@@ -10,12 +14,17 @@ buttons.forEach((button) => {
   button.addEventListener("click", (e) => {
     playerSelection = e.target.innerText;
     playerSelectionDisplay.innerText = playerSelection;
+
     computerSelection = getComputerChoice();
     computerSelectionDisplay.innerText = computerSelection;
-    result.innerText = playRound(playerSelection, computerSelection);
+
+    playRound(playerSelection, computerSelection);
+    wonFive();
+
     console.log("player: " + playerSelection);
     console.log("computer: " + computerSelection);
-    console.log("winner: " + playRound(playerSelection, computerSelection));
+    console.log("winner: " + resultDisplay.textContent);
+    console.log("////////////////");
   });
 });
 
@@ -35,15 +44,33 @@ function playRound(playerSelection, computerSelection) {
     (playerSelection == "paper" && computerSelection == "rock") ||
     (playerSelection == "scissors" && computerSelection == "paper")
   ) {
-    return "player wins!";
+    resultDisplay.textContent = "player wins!";
+    playerScore.textContent++;
+    return;
   } else if (
     (playerSelection == "scissors" && computerSelection == "rock") ||
     (playerSelection == "rock" && computerSelection == "paper") ||
     (playerSelection == "paper" && computerSelection == "scissors")
   ) {
-    return "computer wins!";
+    resultDisplay.textContent = "computer wins!";
+    computerScore.textContent++;
+    return;
   } else {
-    return "tie! nobody wins!";
+    resultDisplay.textContent = "tie! nobody wins!";
+    return;
+  }
+}
+
+// Display the running score, and announce a winner of the game once one player reaches 5 points.
+function wonFive() {
+  if (playerScore.textContent == 5) {
+    winner.textContent = "Player won 5 games first!";
+    console.log("==>" + winner.textContent + "<==");
+    return;
+  } else if (computerScore.textContent == 5) {
+    winner.textContent = "Computer won 5 games first!";
+    console.log("==>" + winner.textContent + "<==");
+    return;
   }
 }
 
