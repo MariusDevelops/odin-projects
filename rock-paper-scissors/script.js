@@ -1,15 +1,21 @@
+// Add a div for displaying results and change all of your console.logs into DOM methods.
+const playerSelectionDisplay = document.querySelector("#player-choise");
+const computerSelectionDisplay = document.querySelector("#computer-choise");
+const result = document.querySelector("#result");
 const buttons = document.querySelectorAll("button");
 
 // Create three buttons, one for each selection. Add an event listener to the buttons that call your playRound function
 // with the correct playerSelection every time a button is clicked. (you can keep the console.logs for this step)
-
 buttons.forEach((button) => {
   button.addEventListener("click", (e) => {
-    let playerSelection = e.target.innerText;
-    let computerSelection = getComputerChoice();
+    playerSelection = e.target.innerText;
+    playerSelectionDisplay.innerText = playerSelection;
+    computerSelection = getComputerChoice();
+    computerSelectionDisplay.innerText = computerSelection;
+    result.innerText = playRound(playerSelection, computerSelection);
     console.log("player: " + playerSelection);
     console.log("computer: " + computerSelection);
-    console.log(playRound(playerSelection, computerSelection));
+    console.log("winner: " + playRound(playerSelection, computerSelection));
   });
 });
 
@@ -29,15 +35,15 @@ function playRound(playerSelection, computerSelection) {
     (playerSelection == "paper" && computerSelection == "rock") ||
     (playerSelection == "scissors" && computerSelection == "paper")
   ) {
-    return "winner: player wins!";
+    return "player wins!";
   } else if (
     (playerSelection == "scissors" && computerSelection == "rock") ||
     (playerSelection == "rock" && computerSelection == "paper") ||
     (playerSelection == "paper" && computerSelection == "scissors")
   ) {
-    return "winner: computer wins!";
+    return "computer wins!";
   } else {
-    return "winner: tie! nobody wins!";
+    return "tie! nobody wins!";
   }
 }
 
